@@ -6,6 +6,7 @@ import loginPage from "../pages/loginPage";
 describe('Visit Homepage', () => {
   
   it('Login and verify user is logged in on homepage', () => {
+    cy.visit('/signin')
 
     loginPage.typeUsername(`${loginData.userName}{enter}`)
     loginPage.typePassword(`${loginData.password}{enter}`)
@@ -16,6 +17,4 @@ describe('Visit Homepage', () => {
     
     homePage.verifyCorrectUserIsLogged(loginData.userName)
   })
-
-
 })
