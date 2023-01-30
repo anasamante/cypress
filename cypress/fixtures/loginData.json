@@ -1,4 +1,5 @@
 {
   "userName": "demouser",
-  "password": "testingisfun99"
+  "password": "testingisfun99", 
+  "invalidUser": "Ana"
 }

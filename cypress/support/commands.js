@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import loginData from "../fixtures/loginData.json";
+
+Cypress.Commands.add('login', (user) => { 
+    cy.request({
+        url: '/api/signin',
+        failOnStatusCode: false,
+        method: 'POST',
+        body: {
+            userName: user,
+            password: loginData.password
+        }
+    }).then((resp) => {
+        cy.wrap(resp).as('respBody')
+    })
+ })
