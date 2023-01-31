@@ -33,7 +33,7 @@ class LoginPage {
         this.getPasswordInput().type(password)
     }
 
-    interceptCall(){
+    interceptApiProducts(){
         cy.intercept('/api/products?userName=demouser').as('pageLoads')
     }
 

@@ -10,8 +10,8 @@ describe('Visit Homepage', () => {
 
     loginPage.typeUsername(`${loginData.userName}{enter}`)
     loginPage.typePassword(`${loginData.password}{enter}`)
-    
-    loginPage.interceptCall()
+
+    loginPage.interceptApiProducts()
     loginPage.clickOnLogin()
     loginPage.waitForPageToFinishLoading()
     

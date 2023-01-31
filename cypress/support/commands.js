@@ -26,7 +26,7 @@
 
 import loginData from "../fixtures/loginData.json";
 
-Cypress.Commands.add('login', (user) => { 
+Cypress.Commands.add('loginPOST', (user) => { 
     cy.request({
         url: '/api/signin',
         failOnStatusCode: false,
