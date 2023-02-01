@@ -39,3 +39,11 @@ Cypress.Commands.add('loginPOST', (user) => {
         cy.wrap(resp).as('respBody')
     })
  })
+
+ Cypress.Commands.add('interceptProductsGETcall', () => { 
+    cy.intercept('/api/products').as('productPage')
+ })
+
+ Cypress.Commands.add('waitProductsPageFinished', () => { 
+    cy.wait('@productPage').its('response.statusCode').should('eq', 200)
+ })
