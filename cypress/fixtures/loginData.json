@@ -1,5 +1,10 @@
-{
-  "userName": "demouser",
-  "password": "testingisfun99", 
-  "invalidUser": "Ana"
+{ 
+  "users": {
+    "validUser": "demouser",
+    "invalidUser": "Ana"
+  },
+  "passwords": {
+    "validPassword": "testingisfun99",
+    "invalidPassword": "Ana"
+  }
 }

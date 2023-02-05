@@ -1,5 +1,4 @@
-const homePage = require("../pages/homePage")
-
+import homePage from '../pages/homePage';
 import homePageData from '../fixtures/homePageData.json'
 
 describe('Filter items by vendor', () => {
